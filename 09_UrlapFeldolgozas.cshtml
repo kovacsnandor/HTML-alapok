@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Űrlap feldolgozás</title>
+    </head>
+    <body>
+        <h1>Űrlap feldolgozás</h1>
+        @{
+            string veznev = Request[ "veznev" ];
+            string kernev = Request["kernev"];
+            string usernev = Request["usernev"];
+            string jelszo = Request["jelszo"];
+            string megye = Request["megye"];
+            string neme = Request["neme"];
+            var piros = Request["piros"];
+            var kek = Request["kek"];
+            var lila = Request["lila"];
+            if (piros == "on")
+            {
+                piros="piros";
+            }
+             
+            <text>
+                <p>
+                Kedves @veznev @kernev ! Regisztrációs adataid:<br/>
+                User név: @usernev, Jelszó: @jelszo<br/>
+                Megye: @megye<br/>
+                Neme: @neme<br>
+                Szín: @piros  @kek  @lila
+
+                <p>
+            </text>
+        }
+    </body>
+</html>

@@ -1,0 +1,16 @@
+﻿@{
+    string veznev = Request["veznev"];
+    string kernev = Request["kernev"];
+    string usernev = Request["usernev"];
+    string jelszo = Request["jelszo"];
+    string megye = Request["megye"];
+    string neme = Request["neme"];
+    
+    <text>
+        <h1>Űrlap feldolgozás</h1>
+        Kedves @veznev @kernev regisztrációs adataid:<br/>
+        User neved: @usernev, Jelszavad: @jelszo. <br/>
+        Megye: @megye <br/>
+        Neme: @neme
+    </text>
+}

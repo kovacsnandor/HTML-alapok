@@ -1,0 +1,30 @@
+﻿@{
+    var valami="";
+    if(IsPost)
+    {
+       valami  = Request["valami"];
+    }
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Űrlap modell</title>
+    </head>
+    <body>
+        <form method="post" action="">
+            Valami = <input type="text" name="valami" value="@valami"> <br>
+            <input type="submit" value="Küldés">
+        </form>
+        @{
+            if(IsPost)
+            {
+                <text>
+                    <p>Ezt írtad: @valami</p>
+                </text>
+            }
+        }
+    </body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+@{
+    if (IsPost)
+    {
+        var veznev = Request["veznev"];
+        var kernev = Request["kernev"];
+        var eletkor = Request["eletkor"];
+        var nev = veznev + " " + kernev;
+        
+        <text>
+            <h1>Regisztrációs adatok</h1>
+            <p>Név: @nev</p>
+            <p>Életkor: @eletkor</p>
+        
+        </text>
+    }
+}
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Regisztrációs űrlap</title>
+    </head>
+    <body>
+        @{
+            if (!IsPost)
+            {
+                
+                <form method="post" action="">
+                    <fieldset>
+                        <legend>Személyes adatok</legend>
+                        <label for="veznev">Vezetéknév:</label> <input type="text" name="veznev"/><br/>
+                        <label for="kernev">Keresztnév:</label> <input type="text" name="kernev"/><br/>
+                        <label for="eletkor">Életkor:</label> <input type="text" name="eletkor"/>
+                    </fieldset>
+                    
+                    <input type="submit" value="Mehet"/>
+                    <input type="reset" value="Törlés"/>
+                    
+                </form>
+          }
+        }
+    </body>
+</html>

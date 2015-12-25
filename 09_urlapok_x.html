@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Űrlap</title>
+</head>
+<body>
+    <form method="post" action="09_UrlapF.cshtml">
+        <fieldset>
+            <legend>Személyes adatok</legend>
+            <label for="veznev">Vezetéknév:</label> <input type="text" name="veznev" id="veznev"/><br/>
+            <label for="kernev">Keresztnév:</label> <input type="text" name="kernev" id="kernev"/>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Regisztrációs adatok</legend>
+            <label for="usernev">Usernév:</label> <input type="text" name="usernev" id="usernev"/><br/>
+            <label for="jelszo">Jelszó:</label> <input type="password" name="jelszo" id="jelszo"/>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Egyéb adatok</legend>
+            <label for="megye">Megye:</label>
+            <select id="megye" name="megye">
+                <option>Bács-Kiskun</option>
+                <option selected="selected">Baranya</option>
+                <option>Vas</option>
+            </select><br/>
+            
+            <input type="radio" checked="checked" id="ferfi" value="Férfi" name="neme"/><label for="ferfi"> Férfi</label><br/>
+            <input type="radio" id="no" value="Nő" name="neme"/><label for="no"> Nő</label>
+        </fieldset>
+        <input type="submit" value="Mehet"/> <input type="reset" value="Törlés"/>
+    </form>
+</body>
+</html>

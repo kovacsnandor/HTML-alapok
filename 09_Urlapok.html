@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Űrlap</title>
+    </head>
+    <body>
+        <form method="post" action="09_UrlapFeldolgozas.cshtml">
+            <fieldset>
+                <legend>Személyes adatok</legend>
+                <label for="veznev">Vezetéknév: </label> <input type="text" id="veznev" name="veznev" alt="Ide írd a vezeték nevedet" size="25"/> <br/>
+                <label for="kernev">Keresztnév: </label> <input type="text" id="kernev" name="kernev" />
+            </fieldset>
+            
+            <fieldset>
+                <legend>Regisztrációs adatok</legend>
+                <label for="usernev">Usernév: </label> <input type="text" id="usernev" name="usernev"/> <br/>
+                <label for="jelszo">Jelszó: </label> <input type="password"  id="jelszo" name="jelszo"/>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Egyéb adatok</legend>
+                <label for="megye">Megyék: </label>
+                <select name="megye" id="megye">
+                    <option>Bács-Kiskun</option>
+                    <option selected>Baranya</option>
+                    <option>Borsod</option>
+                    <option>Csongrád</option>
+                    <option>Fejér</option>
+                </select><br/>
+                <input type="radio" name="neme" checked="checked" id="ferfi" value="Férfi"/> <label for="ferfi">Férfi</label><br/>
+                <input type="radio" name="neme" id="no" value="Nő"/> <label for="no">Nő</label>
+
+                <p>Kedvenc színe</p> 
+                <input type="checkbox" name="piros" id="piros"><label for="piros">Piros</label><br>
+                <input type="checkbox" name="kek" id="kek"><label for="kek">Kék</label><br>
+                <input type="checkbox" name="lila" id="lila"><label for="lila">Lila</label>
+            </fieldset>
+            <input type="submit" value="Mehet"/> <input type="reset" value="Törlés"/>
+        </form>
+    </body>
+</html>
